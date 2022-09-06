@@ -29,7 +29,7 @@ from cozmo.util import degrees, distance_mm, speed_mmps
 
 #: The name that the owner's face is enrolled as (i.e. your username in the app)
 #: When that face is seen, Cozmo will assume no other faces currently seen are intruders
-OWNER_FACE_ENROLL_NAME = ""
+OWNER_FACE_ENROLL_NAME = "Audric"
 
 
 if OWNER_FACE_ENROLL_NAME == "":

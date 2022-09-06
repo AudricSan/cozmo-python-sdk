@@ -168,7 +168,8 @@ class CozmoQuizMaster:
         cube_ids = cozmo.objects.LightCubeIDs
         cube_colors = [cozmo.lights.red_light, cozmo.lights.green_light, cozmo.lights.blue_light]
         player_names = ["Red", "Green", "Blue"]
-        self._players = []  # type: list of CozmoQuizPlayer
+        # type: list of CozmoQuizPlayer
+        self._players = []
         for i in range(len(cube_ids)):
             cube = robot.world.get_light_cube(cube_ids[i])
             player = CozmoQuizPlayer(robot, cube, i, cube_colors[i], player_names[i])
@@ -179,7 +180,7 @@ class CozmoQuizMaster:
         self._answers_accepted = False
         self._questions = []
 
-        with open("quiz_questions.json") as data_file:
+        with open("C:/Users/audri/Downloads/cozmo/cozmo-python-sdk/examples/apps/quiz_questions.json") as data_file:
             data = json.load(data_file)
 
         for quiz_question_json in data:

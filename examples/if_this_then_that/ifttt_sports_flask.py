@@ -89,7 +89,7 @@ import sys
 import threading
 
 import cozmo
-sys.path.append('../lib/')
+sys.path.append('C:/Users/audri/Downloads/cozmo/cozmo-python-sdk/examples/lib')
 import flask_helpers
 
 from common import IFTTTRobot

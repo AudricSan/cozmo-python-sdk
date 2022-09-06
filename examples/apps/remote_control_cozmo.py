@@ -25,7 +25,7 @@ import json
 import math
 import sys
 
-sys.path.append('../lib/')
+sys.path.append('C:/Users/audri/Downloads/cozmo/cozmo-python-sdk/examples/lib')
 import flask_helpers
 import cozmo
 
