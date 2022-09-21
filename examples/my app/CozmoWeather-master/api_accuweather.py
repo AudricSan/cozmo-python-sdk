@@ -20,7 +20,7 @@ import requests
 
 
 # This should be your own key, created through: http://developer.accuweather.com/
-API_KEY = 'DDhltnIvGuzEhKjZF7cwvMnov39bcgDk'
+API_KEY = '7PAQStMa0lbseOnYLn3aUApbA804qXIW'
 
 
 class AccuWeatherAPIError(Exception):

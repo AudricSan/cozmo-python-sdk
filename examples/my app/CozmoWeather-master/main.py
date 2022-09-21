@@ -11,15 +11,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from queue import Empty
-import sys
+
 import time
+import sys
 import cozmo
 import cozmo_utils
 import api_accuweather
 
 # City name. Put something very explicit, this acts as a search string in AccuWeather's API
-
 CITY_NAME = "Bruxelles"
 
 if CITY_NAME == "":
@@ -48,17 +47,17 @@ def cozmo_program(robot: cozmo.robot.Robot):
     forecasts = api_accuweather.get_forecasts(CITY_NAME)
 
     # Cozmo requests your attention
-    action = robot.say_text("Prévisions météorologiques")
+    action = robot.say_text("Weather Forecast")
     cozmo_utils.display_image_file_on_face(robot, "C:/wamp64/www/cozmo-python-sdk/examples/my app/CozmoWeather-master/images/weather.png")
     action.wait_for_completed()
 
     # For each day's forecast, read it out loud
-    for fc in forecasts["Prévisions"]:
+    for fc in forecasts["Forecasts"]:
         # Get the date from the forecast (yyyy-mm-dd)
         date = fc["Date"]
 
         # Get the forecast itself (sunny, cloudy, etc.)
-        fc_text = fc["Prévisions"]
+        fc_text = fc["Forecast"]
 
         # Converts the date from the format 'yyyy-mm-dd' to the name of the
         # weekday (Tuesday, Monday, etc.)
